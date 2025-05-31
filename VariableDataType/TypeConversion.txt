@@ -1,0 +1,49 @@
+Type Conversion / implicit conversion is that small datatype stores in big datatype
+
+Conversion happens when:
+ a. type compatible  
+ b. destination type > source type
+
+Examples of type compatibility:
+- int to float (compatible, float can hold all int values)
+- float to double (compatible, double is wider)
+- byte to int (compatible, int is larger)
+- char to int (compatible, both are numeric types)
+- short to long (compatible, long has higher range)
+
+byte -> short -> int -> float -> long -> double
+
+
+Scanner sc = new Scanner(System.in);
+float number = sc.nextInt(); ✅ 
+// but this is below not possible because it is less than store as we can see the destination type < source type
+int number =  sc.nextFloat(); ❌
+System.out.println(number); 
+
+
+ Type Casting / narrowing conversion /explicit conversion
+float a= 25.0f;
+int b = (int)a;
+
+
+Type Promotion in Expression
+1. Java automatically promotes each byte, short , or char operand to int when
+   evaluating an expression.
+2. If one operand is long, float or double the whole expression is promoted
+   to long, float or double respectively.
+
+
+   a + b * c / e
+Here a - >int
+     b -> float
+     c-> char
+     d -> long
+
+byte, short , or char operand to int when
+   evaluating an expression.
+
+how is our code running?
+This is portable language it can run any machine due to it convert to the Byte Code it can executed on any machine mac,windows,linux.
+Source code .java ---> Compiler -----> Byte code .class -----> Java Virtual Machine(JVM) -----> Native code
+|                                                    |
+-----------------  Compilation -----------------------

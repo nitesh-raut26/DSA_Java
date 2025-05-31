@@ -1,0 +1,12 @@
+Inputs in Java
+
+next
+nextLine
+nextInt
+nextByte
+nextFloat
+nextDouble
+nextBoolean
+nextShort
+nextLong
+

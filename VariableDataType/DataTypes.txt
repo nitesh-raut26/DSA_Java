@@ -1,0 +1,99 @@
+Data Types in Java
+
+Primitive                                                             Non-Primitive
+In the java it exits                                                   we have to create 
+we have to not to create 
+that is Primitive 
+                                                                            Interface
+byte     1byte= 8 bits 2^8 = 256 -128 to 127                                String
+short    2 byte = 2^16 = 65,536 -32,768 to 32,767                            Array
+char     2 byte                                                              Class
+boolean  1 byte                                                              Object
+int      4 byte = 2^32 = 4,294,967,296 values → Range: -2,147,483,648 to 2,147,483,647
+long     8 byte = 2^64 = 18,446,744,073,709,551,616 values → Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float    4 byte → Approx. range: 1.4 × 10⁻⁴⁵ to 3.4 × 10³⁸, Precision: ~6–7 decimal digits
+double   8 byte
+
+Note:
+- Range means the smallest to largest values that can be stored (regardless of accuracy).
+- Precision refers to how many digits can be stored accurately.
+- A float can store large numbers like 3.4e38, but precision is only reliable for ~6–7 digits.
+double   8 byte → Approx. range: 4.9 × 10⁻³²⁴ to 1.7 × 10³⁰⁸, Precision: ~15–16 decimal digits
+
+
+
+| Feature       | char                          | short                          |
+|---------------|-------------------------------|--------------------------------|
+| Size          | 2 bytes (16 bits)             | 2 bytes (16 bits)              |
+| Signed?       | ❌ Unsigned                   | ✅ Signed                      |
+| Range         | 0 to 65,535                   | -32,768 to 32,767              |
+| Purpose       | Holds a single Unicode char   | Holds small integers           |
+| Default value | '\u0000' (null character)     | 0                              |
+
+Why different ranges?
+	•	short is signed, meaning it uses 1 bit for sign, leaving 15 bits for values:
+	•	2^15 = 32,768 → Range: -32,768 to 32,767
+	•	char is unsigned, meaning all 16 bits are used for value:
+	•	2^16 = 65,536 → Range: 0 to 65,535
+
+char ch = 65;       // Valid → represents 'A'
+short s1 = 65;      // Valid
+short s2 = -100;    // Valid
+char ch2 = -100;    // ❌ Invalid → char cannot be negative
+
+Type
+Size (bits)
+Format Type
+What It Stores
+int
+32 bits
+Integer (2’s complement)
+Whole numbers only (no decimals)
+One bit for sign, rest for value.
+	•	It can store all integers from:
+-2^31 to 2^31 - 1 → -2,147,483,648 to 2,147,483,647
+
+
+float
+32 bits
+IEEE 754 Floating Point
+Decimal numbers using scientific notation
+
+float splits the 32 bits into 3 parts (IEEE 754 format):
+
+
+1 bit  |  8 bits   |       23 bits
+Sign   | Exponent  |   Fraction (mantissa)
+
+Decimal Digits ≈ 23 × log₁₀(2)
+               ≈ 23 × 0.30103
+               ≈ 6.9
+float f = 1234567.0f;   // OK
+float f = 12345678.0f;  // Not exact — you may lose precision              
+
+1 bit   | 11 bits   |        52 bits
+Sign    | Exponent  |   Fraction (mantissa)
+
+Decimal Digits ≈ 52 × log₁₀(2)
+               ≈ 52 × 0.30103
+               ≈ 15.65
+
+double d1 = 123456789012345.0;   // Accurate (15 digits)
+double d2 = 12345678901234567.0; // May lose precision (17 digits)
+
+First to define the datatype
+
+Signed vs Unsigned Types in Java:
+
+✅ Unsigned Types:
+- char: 16-bit unsigned, stores Unicode values from 0 to 65,535
+- boolean: Not numeric, but acts like a 1-bit value (true/false), so behaves unsigned
+
+🔁 Signed Types:
+- byte:    -128 to 127
+- short:   -32,768 to 32,767
+- int:     -2,147,483,648 to 2,147,483,647
+- long:    -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+- float:   ~±3.4 × 10³⁸ (approximate, with ~7-digit precision)
+- double:  ~±1.7 × 10³⁰⁸ (approximate, with ~15–16 digit precision)
+

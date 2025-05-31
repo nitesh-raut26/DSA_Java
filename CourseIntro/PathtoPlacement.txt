@@ -1,0 +1,62 @@
+Step 1: Learn a Language
+Step 2: Learn Data Structure & Algorithms
+
+LIVE
+Step 3: Projects, Theory Subjects, Resume , Referrals, Applying to Companies,
+        Interview Preparation
+
+
+FlowChart
+Components
+Start/Exit   Oval shape Start
+
+Input/Output Parellogram shape Read N or Print "Hi"
+
+Process  rectangle shape me hota hai  name ="nitesh" variable assign 
+
+Decision Diamond shape ismarks>33 condition 
+
+
+find max of 3 numbers
+Input a,b,c 
+if a>b do 
+  if a>c do 
+     print a; 
+  else
+     print c;
+
+else 
+   if b>c do 
+      print b;
+   else
+      print c;
+
+exit;
+
+
+Find if number is prime 
+
+Start
+Input N
+let div = 2
+while div<n do
+      if n%div == 0 do
+         print "Not prime"
+         exit
+      else
+         div = div+1
+print "Prime"
+exit;
+
+
+
+
+
+
+
+
+
+
+
+
+
