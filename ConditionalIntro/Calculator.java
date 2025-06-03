@@ -11,6 +11,7 @@ public class Calculator {
         int b = sc.nextInt();
         System.out.println("enter operator : ");
         char operator = sc.next().charAt(0);
+       
         // int a = 10;
         // int b = 5;
         //char ch = '+';

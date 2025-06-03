@@ -1,0 +1,29 @@
+ // important Note 
+
+ java have always call by value pass in the another function that have passes the arguments.
+     java have always call by value..
+
+        // java always call by value means always do copy of the value not change in the original value.
+        // that means we pass the a and b in the swapNumber so that it chnages in the a and b that function does change in the main function of a and b;
+        // here is the stack frame have original value same and stack frame of swapNumber function have omitted when is is return so all the variables have been deleted.
+        // So does not change in another function of the variable it will remains same.
+
+
+
+In Java there are two methods 
+user defined --> like we have define the function like factorial ,sum,multiply
+
+Inbuilt method -->Math  -->pow ,sqrt,max
+         
+
+function Overloading
+Multiple functions with the same name but different parameters.
+
+multiply(int a,int b)
+multiply(float,float b)
+multiply(double a, double b)
+
+
+
+
+
