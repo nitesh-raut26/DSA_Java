@@ -1,0 +1,36 @@
+Operations in Arrays
+
+. Create
+. Input 
+. Output
+. Update
+
+1. Create
+dataType arrayName[]= new dataType[size];
+
+// creating an array
+int marks[]= new int[50];
+int numbers[]={1,2,3};
+int moreNumbers[]={4,5,6};
+String fruits[]={"apple","mango","orange"}
+
+
+Arrays is by reference passing array as argument.
+
+so does change it is reflected in the function .
+
+Binary Search applies only on sorted arrays.
+
+pairs in Array
+
+[2,4,6,8,10]
+
+(2,4) (2,6) (2,8) (2,10)
+(4,6) (4,8) (4,10)
+(6,8) (6,10)
+(8,10)
+
+
+
+
+
