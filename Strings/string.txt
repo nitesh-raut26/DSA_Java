@@ -1,0 +1,78 @@
+What are strings
+char[] = {'a','b','c','d'}
+String str = "abcd"
+String str2 = new String("xyz");
+
+
+String are immutable means old string that we define nevers changes
+
+comparator 
+
+String s1 = "Tony";
+String s2 = "Tony";
+String s3 = new String("Tony");
+
+if(s1 == s2){
+    sout("Strings are equal");
+}
+if(s1 == s3){
+    sout("trings are not equal);
+}
+
+// output is the that is not equal
+// first one is equal
+// for second one is not equal
+
+so i have to used the .equals methods so that the 
+the values check 
+
+we used this for the string compare values
+if(s1.equals(s2)){
+    sout("s1 and s2 are equals);
+}
+
+
+String functions
+Substring
+
+start index to end index(excluded)
+HelloWorld
+0 to 4 then it gives the Hell
+3 and 5 then it gives the -->lo
+
+
+Stack and heap memory 
+Strings are immutable
+
+StringBuilder
+StringBuilder sb = new StringBuilder("HW);
+sb.toString()
+
+
+StringBuilder sb = new StringBuilder("Hello");
+
+sb.insert(5, ",");        // "Hello,"
+sb.delete(0, 2);          // "llo,"
+sb.reverse();             // ",oll"
+
+System.out.println(sb);  // Output: ",oll"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
