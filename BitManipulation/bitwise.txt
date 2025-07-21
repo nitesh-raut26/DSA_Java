@@ -1,0 +1,102 @@
+Bit-Wise Operators
+
+Binary AND &
+Binary OR |
+Binary XOR ^
+Binary One's Complement ~
+Binary Left Shift <<
+Binary Right Shift >>
+
+Binary XOR ^
+
+Rules
+
+0 ^ 0 --> 0
+0 ^ 1 --> 1
+1 ^ 0 --> 1
+1 ^ 1 --> 0
+
+Binary One's Complement
+Rules 
+~0 --> 1
+~1 --> 0
+
+~5 --> 101 --> 010 -> (2)base10 --> 010 But this is not possible
+It gives the answer the -6
+Least Significant Bit
+Most Significant Bit
+
+5 --->   0 0 0 0 0 1 0 1
+        MSB           LSB here LSB is 1 means it is +5
+        1 0 0 0 0 1 0 1
+        MSB           LSB    here MSB is 1 so it means -5
+
+     ~5  1 1 1 1 1 0 1 0
+
+     2's Complement
+      |
+     1's Complement (~ n)
+      |
+     add 1
+     then it comes the ~5
+                 1(carry)
+     0 0 0 0 0 1 0 1
+                 + 1
+        ------------        
+     0 0 0 0 0 1 1 0    --> 6
+     In 2's complement it is come MSB one so it becomes negative
+
+  So the answer is negative 6 
+
+  Binary Left shift 
+  Rules
+  a<<b
+  5<<2
+  12         two number shift left Side
+  000101100 
+   
+  010110000  space two fill with 0
+  ---------
+
+  Formula is a<<b = a*2^b
+  5<<2 = 5*2^2 = 20
+
+  Binary Right Shift
+
+  001001100
+  000010011     right shift two 5>>2
+  ---------
+  Formula is a>>b = a/2^b 
+
+
+  Operations
+  Get ith Bit
+  00001111
+  00000100  (1<<2) (1<<ith bit) & Operators
+-----------
+  00000100   => nonzero means ith bit is 1
+
+  if zero comes means ith bit is 0.
+
+  (n & 1<<i)
+
+  Set ith Bit
+  00001010
+  00001110 --> we have to set the ith bit is 1 on the pos is 2 i = 2 | Operators used
+
+   (n | 1<<i)
+
+ here 0 to 1 make bit
+
+  Clear ith Bit
+  means we have to bit make 1 to 0
+  10 = 1010 become 1000 i=1
+
+  1<<i become 0010
+  ~(1<<i) then we have to make the & operator 
+
+
+
+
+
+
