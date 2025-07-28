@@ -1,0 +1,264 @@
+Object Oriented Programming
+
+Classes & Objects
+   |        |
+   |        |
+   |    entities in the real world
+   |
+   |
+   |
+group of these entities
+
+
+
+
+
+Access Modifiers   within class  | within package  | outside package by subclass only | outside package
+private               Y               N                         N                           N
+default               Y               Y                         N                           N
+protected             Y               Y                         Y                           N
+public                Y               Y                         Y                           Y
+
+
+Note :
+Default methods are allowed only in interfaces.
+
+
+Getters and Setters
+
+Get: to return the value
+
+Set: to modify the value
+
+this: this keyword is used to refer to the current object.
+
+
+Four Pillars of OOPs
+
+Encapsulation
+Inheritance 
+Abstraction
+Polymorphism
+
+
+Encapsulation:
+
+Encapsulation is defined as the wrapping up of data & methods under a single unit.
+It also implements data hiding.
+
+
+Constructors
+Constructor is a special method which is invoked automatically
+ at the time of Object creation.
+
+ --> Constructor have the same name as class or structure.
+ --> Constructor don't have a return type. (Not even void)
+ --> Constructor are only called once, at object creation.
+ --> Memory allocation happens when Constructor is called.
+
+
+ Type of Constructor(3 types)
+
+ 1.Non-parameterized
+
+ 2.parameterized
+
+ 3.Copy Constructor
+
+
+ Constructor Overloading
+ (which suitable to call the constructor on the basis of that call if we create one constructor then we have 
+  to write whatever create constructor we have to define the constructor even className() this constructor should be write.
+ )
+--> this concept is also come under Polymorphism
+
+Multiple constructor called with the same name
+
+In java we have to create a copy constructor but in C++ by default it is created.
+
+
+Copy constructor do properties on one objects to another objects.
+
+Shallow Copy and Deep Copy 
+In Shallow Copy the changes reflect because it point to reference . when we copy one object to another object
+and chnages in the array , object that have reference same point so after the creation of copy 
+when we change in the array it reflects in another object. because they refrence to same location.
+
+
+
+Deep Copy --> Chnages don't reflect.
+new marks array
+
+
+Inheritance
+Inheritance is when properties & methods of base class are
+passes on to a derived class.
+
+
+parent(Base)
+  |
+child(Derived)
+
+Animal{
+    String skinColor
+    eat()
+    breathe()
+}
+
+Fish inhertis Animal class
+Fish{
+   int fins
+   swim()
+}
+
+Type of Inheritance
+Single Level Inheritance:
+parent(Base)
+  |
+child(Derived)
+
+Multi Level Inheritance
+
+parent(Base)
+  |
+Derived class
+  |
+Derived class
+
+
+Animal --> Mammals --> Dog (Multi Level Inheritance)
+
+Hirearchial Inheritance
+         Base class
+             /\      \
+            /  \      \
+           /    \        \
+     Derived    Derived   Derived 
+                            class3  ---> Multiple derived class in this line that is called Hirearchial.
+     class 2     class 1 
+
+               Animal --> eat(),breathe()
+             /    \      \
+          Fish   Bird   Mammals
+         swim()   fly()   walk()
+
+
+Hybrid Inheritance
+It is combination of Hirearchial and multi-level Inheritance
+
+              Base class
+             /        \
+            /          \
+           /            \ 
+        Derived         Derived 
+         class1          class2
+                           |
+                           |
+                          Derived class1
+
+              Animal --> eat(),breathe()
+             /    \      \
+          Fish   Bird   Mammals
+         swim()   fly()   walk()
+        /   \       |         |\\
+      Tuna Shark    |         | \
+                    |         |  \
+                  Peacock     |   \
+                              Dog  Cat
+
+In java Multiple Inheritance is not there available.
+            Base class1      Base class2
+                 \              /
+                  \            /
+                   \          /
+                    \        /
+                  Derived class
+    It is possible by Interfaces not classes in Java.
+
+
+Polymorphism (Many Forms)  example of constructor
+Compile Time Polymorphism (static Polymorphism)
+   . Method Overloading
+Multiple functions with the same name but different parameters. (e.g -> constructors)
+
+calculator we have to make the sum (type or count different) function overloading / Method Overloading
+sum(int a,int b)
+sum(float a, float b)
+sum(int a ,int b, int c) 
+
+Run time Polymorphism (dynamic Polymorphism)
+   . Method Overriding
+Parent and Child classes both contain the same function with a 
+different definition.
+  same name and same parameters 
+    class A           Animal
+                     void eat(x) ->"eat nothing
+       |                |
+                       Deer 
+    class B         void eat(x) -->"eat grass"
+
+
+package in Java
+package is a group of similar types of classes, interfaces and sub-packages.
+
+Abstraction
+Hiding all the unneccassary details and showing only the
+important parts of the user.
+
+             /\
+            /  \
+           /    \
+          /      \ 
+    Abstract     Interfaces
+     class
+
+Abstract class
+ -- Cannot create an instance(object) of abstract class.
+ -- Can have abstract/non-abstract methods
+ -- Can have constructors.
+ 
+ in the class we make the abstract class A or we also write in the function
+
+ abstract void 
+
+Interfaces
+Interface is the blueprint of class.
+Car  [wheels , speed , engine] (interfaces)
+ |
+Maruti 800 (class)
+  |
+[car1         car2      car3        car4 ] ->objects
+Maruti800    Maruti800   Maruti800   Maruti800
+
+
+Interface is used for the Multiple Inheritance.
+total Abstraction used in Interface
+
+-- All methods are public, abstract & without implementations
+-- Used to achieve total abstraction
+-- Variables in the interface are final, public and static(class ke liye ek hi baar variable declare hota hai)
+
+
+Static keyword
+static keyword in Java is used to share the same variable or method of a given class.
+
+-- properties
+-- functions
+-- Blocks
+-- Nested Classes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
